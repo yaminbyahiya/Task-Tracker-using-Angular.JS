@@ -18,7 +18,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('task-tracker');
   });
 
-  it('should render title', () => {
+  it('should resnder title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
