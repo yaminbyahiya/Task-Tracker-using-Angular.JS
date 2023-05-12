@@ -1,6 +1,12 @@
 <header>
     <h1>
+        <!-- Displaying app title declared in tasks.component.ts -->
         {{title}}
     </h1>
-    <app-button color="{{showAddTask?'red': 'green'}}" text="{{showAddTask?'Close': 'Add'}}" (btnClick)="toggleAddTask()"></app-button>
+    <!-- Passing color and text to the button component and receiving btnClick response from button header which calls the function toggleAddTask() -->
+    <app-button 
+        color="{{showAddTask?'red': 'green'}}" 
+        text="{{showAddTask?'Close': 'Add'}}" 
+        (btnClick)="toggleAddTask()">
+    </app-button>
 </header>
