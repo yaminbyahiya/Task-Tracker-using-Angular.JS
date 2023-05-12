@@ -4,7 +4,8 @@
         {{title}}
     </h1>
     <!-- Passing color and text to the button component and receiving btnClick response from button header which calls the function toggleAddTask() -->
-    <app-button 
+    <app-button
+    *ngIf="hasRouter('/')"
         color="{{showAddTask?'red': 'green'}}" 
         text="{{showAddTask?'Close': 'Add'}}" 
         (btnClick)="toggleAddTask()">
