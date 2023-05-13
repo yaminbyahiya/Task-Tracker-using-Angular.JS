@@ -12,13 +12,13 @@ export class HeaderComponent {
   showAddTask: boolean = false; //THe Add/Close button is displayed on the basis of the boolean value of showAddTask variable
   subscription: Subscription;
   constructor(private uiService:UiService, private router: Router){
-    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showAddTask=value));
+    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showAddTask=value)); //Receives the boolean value of showAddTask from observable Subject which returns the showAddTask variable value of ui.services.ts. 
   }
   ngOnInit(): void {}
   toggleAddTask(){ //Executed when onClick() function on button.component.ts is called. It inverts the boolean value of showAddTask
     this.uiService.toggleAddTask();
   }
-  hasRouter(route:string){
+  hasRouter(route:string){ //Makes sure the button component is only visible on the home page by comparing the current link with the home page link paseed as parameter. 
     return this.router.url === route;
   }
 }
