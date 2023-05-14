@@ -1,3 +1,8 @@
-<button [ngStyle]="{'background-color': color}" class="btn" (click)="onClick()">
+<!-- Background color and text is passed as input from button.component.ts -->
+<!-- When button is clicked, onClick() function is triggered which emits and outputs btnClick() to header.component.html -->
+<button 
+[ngStyle]="{'background-color': color}" 
+class="btn" 
+(click)="onClick()">
     {{text}}
 </button>
